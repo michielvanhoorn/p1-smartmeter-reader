@@ -41,9 +41,15 @@ small_tarif1kwh = raw_tarif1kwh[17:20]
 small_tarif2kwh = raw_tarif2kwh[17:20]
 small_gasm3 = raw_gasm3[32:35]
 
-tarif1kwh = int(decimal_tarif1kwh) + (int(small_tarif1kwh)/1000)
-tarif2kwh = int(decimal_tarif2kwh) + (int(small_tarif2kwh)/1000)
-gasm3 = int(decimal_gasm3) + (int(small_gasm3)/1000)
+#tarif1kwh = int(decimal_tarif1kwh) + (int(small_tarif1kwh)/1000)
+#tarif2kwh = int(decimal_tarif2kwh) + (int(small_tarif2kwh)/1000)
+#gasm3 = int(decimal_gasm3) + (int(small_gasm3)/1000)
+
+tarif1kwh = int(decimal_tarif1kwh)
+tarif2kwh = int(decimal_tarif2kwh)
+gasm3 = int(decimal_gasm3)
+
+
 
 timenow = datetime.datetime.now().time()
 datenow = datetime.datetime.now().date()
@@ -52,8 +58,10 @@ output = str(datenow) + ';' + str(timenow) + ';'+  str(tarif1kwh) + ';' + str(ta
 
 print(output)
 
-f= open('data.txt' , 'a')
+f= open('/home/pi/peeone/data.txt' , 'a')
 f.write(output)
 f.close
 
 print("Success")
+
+
