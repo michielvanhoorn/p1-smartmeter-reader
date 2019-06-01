@@ -3,3 +3,6 @@ https://www.cyberciti.biz/tips/linux-use-gmail-as-a-smarthost.html
 https://tecadmin.net/bash-mail-command-not-found/
 
 cat /home/pi/peeone/data.txt | mail -s "data from pi" target@domain.com
+
+Adding internet speedtest
+http://www.linuxandubuntu.com/home/speedtest-cli-internet-speed-test-in-linux-terminal
